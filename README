@@ -1,0 +1,13 @@
+I used Node.js to implement the requested functionalities in Assignment 3. Here are the steps to follow for the initial setup:
+
+1- Make sure you have Node in your pc. You can use this link to download both Node and NPM: https://nodejs.org/en/download
+
+2- You can check if the node is installed correctly using the command "node -v" which shows the downloaded Node version.
+
+3- After downloading the Node, you need to install "pg" npm package using this command "npm i pg" (NPM should already be included in Node you 've downloaded).
+
+- here is the official page of the package: https://www.npmjs.com/package/pg
+
+3- "schema.sql" file contains the initial sql statements for creating the "students" table and inserting the initial data. Make sure you run these before testing the functions.
+
+4- If you are done with the initial setup above, you can just run the command "node db.js" to start the execution of the javascript file.
