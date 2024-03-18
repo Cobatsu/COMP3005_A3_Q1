@@ -2,12 +2,17 @@ I used Node.js to implement the requested functionalities in Assignment 3. Here 
 
 1- Make sure you have Node in your pc. You can use this link to download both Node and NPM: https://nodejs.org/en/download
 
-2- You can check if the node is installed correctly using the command "node -v" which shows the downloaded Node version.
+2- You can check if the node is installed correctly using the command "node -v" which shows the current Node version being used.
 
-3- After downloading the Node, you need to install "pg" npm package using this command "npm i pg" (NPM should already be included in Node you 've downloaded).
+3- After downloading the Node, you need to install "pg" npm package running this command "npm i pg" in the termninal (NPM should already be included in Node you 've downloaded).
+  - here is the official page of the package: https://www.npmjs.com/package/pg
+  - pg package allows us to connect to the PostgreSQL database.
 
-- here is the official page of the package: https://www.npmjs.com/package/pg
+4- "schema.sql" file contains the initial sql statements for creating the "students" table and inserting the initial data. Make sure you run these before testing any functions.
 
-3- "schema.sql" file contains the initial sql statements for creating the "students" table and inserting the initial data. Make sure you run these before testing the functions.
+5- If you are done with the initial setup above, you can just run the command "node db.js" to start the execution of the javascript file.
 
-4- If you are done with the initial setup above, you can just run the command "node db.js" to start the execution of the javascript file.
+6- To test the functions, you can just uncomment the functions calls that I already wrote, save the file and run the "node db.js" command again.
+
+7- Remember after every change you make on the file (uncommenting functions you want to test etc.), you need to save the file and execute the script again using "node db.js".
+
