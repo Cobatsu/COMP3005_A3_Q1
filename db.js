@@ -4,7 +4,7 @@ const rl = require("readline").createInterface({
   output: process.stdout,
 });
 
-// Configure the PostgreSQL client
+// Configure the PostgreSQL client, please enter the credentials of your PostgreSQL here.
 const client = new Client({
   user: "postgres",
   host: "localhost",
