@@ -1,4 +1,8 @@
 const { Client } = require("pg");
+const rl = require("readline").createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 // Configure the PostgreSQL client
 const client = new Client({
@@ -12,7 +16,7 @@ const client = new Client({
 // Connects to the database
 client
   .connect()
-  .then(() => console.log("Connected to the database"))
+  .then(() => {})
   .catch((err) => console.error("Connection error", err.stack));
 
 //retrieves all students
@@ -41,12 +45,53 @@ async function deleteStudent(student_id) {
   await client.query(query, [student_id]);
 }
 
-//getAllStudents().then((students) => {
+// getAllStudents()
+//   .then((students) => {
+//     console.log(students);
+//   })
+//   .catch(() => {
+//     console.log("ERROR: Student can not be fetched");
+//   });
 
-//});
+// rl.question(
+//   "Please enter the NAME, LASTNAME, EMAIL OF THE STUDENT TO BE INSERTED: \n",
+//   (NAME) => {
+//     rl.question("", (LASTNAME) => {
+//       rl.question("", (EMAIL) => {
+//         addStudent(NAME, LASTNAME, EMAIL, new Date())
+//           .then(() => {
+//             console.log("Student inserted successfully.");
+//           })
+//           .catch(() => {
+//             console.log("ERROR: Student can not be inserted");
+//           });
+//         rl.close();
+//       });
+//     });
+//   }
+// );
 
-//addStudent("FATIH", "OZER", "fatih.ozer@cmail.carleton.ca", new Date());
+// rl.question(
+//   "Please enter the id of the student to be updated and the email \n",
+//   (ID) => {
+//     rl.question("", (EMAIL) => {
+//       updateStudentEmail(ID, EMAIL)
+//         .then(() => {
+//           console.log("Student updated successfully.");
+//         })
+//         .catch(() => {
+//           console.log("ERROR: Student can not be updated");
+//         });
+//     });
+//   }
+// );
 
-//updateStudentEmail(9, "huze.ozr@gmail.com");
-
-deleteStudent(9);
+// rl.question("Please enter the id of the student to be deletd \n", (ID) => {
+//   deleteStudent(ID)
+//     .then(() => {
+//       console.log("Student deleted successfully.");
+//     })
+//     .catch(() => {
+//       console.log("ERROR: Student can not be deleted");
+//     });
+// });
